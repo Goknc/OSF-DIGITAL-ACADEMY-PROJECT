@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detailed Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="pdp-style.css">
+</head>
+
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a class="text-dark" href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Category Landing</li>
+        </ol>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 select-section">
+                <label for="price">Price</label>
+                <select name="price" id="price">
+                    <option value="zero">$0.00 - $100.00</option>
+                    <option value="hundred">$100.00 - 500.00</option>
+                    <option value="five-hundred">$500.00 - $1000.00</option>
+                    <option value="thousand">$1000.00 - $10000.00</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-sm-12 select-section">
+                <label for="brands">Brands</label>
+                <select name="brands" id="brands">
+                    <option value="nike">Nike</option>
+                    <option value="adidas">Adidas</option>
+                    <option value="puma">Puma</option>
+                    <option value="slazenger">Slazenger</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-sm-12 select-section">
+                <label for="size">Size</label>
+                <select name="size" id="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-sm-12 select-section color-section">
+                <label for="color">Color</label>
+                <ul>
+                    <li class="color-item" id="white"></li>
+                    <li class="color-item" id="turqoise"></li>
+                    <li class="color-item" id="black"></li>
+                    <li class="color-item" id="green"></li>
+                    <li class="color-item" id="blue"></li>
+                    <li class="color-item" id="orange"></li>
+                    <li class="color-item" id="red"></li>
+                    <li class="color-item" id="grey"></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-12 select-section">
+                <label for="sort-by">Sort by</label>
+                <select name="sort-by" id="sort-by">
+                    <option value="price">Price</option>
+                    <option value="alphabetically">Alphabetically</option>
+                    <option value="release-date">Release Date</option>
+                    <option value="discount">Discount</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-sm-12 select-section">
+                <label for="show">Show</label>
+                <select name="show" id="show">
+                    <option value="sixteen">16 per page</option>
+                    <option value="eight">8 per page</option>
+                    <option value="twenty-four">24 per page</option>
+                    <option value="thirty-two">32 per page</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
