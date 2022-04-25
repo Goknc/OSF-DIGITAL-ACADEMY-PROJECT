@@ -82,3 +82,25 @@ $(document).ready(function () {
 });
 
 
+
+
+/******************** MODAL **************/
+
+
+var modal = document.getElementById('open-modal');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function showPass() {
+    var temp = document.getElementById("psw");
+    if (temp.type === "password") {
+        temp.type = "text";
+    }
+    else {
+        temp.type = "password";
+    }
+}
