@@ -862,3 +862,67 @@ span.psw {
     width: 100%;
   }
 }
+
+
+
+.cookie-container p {
+  margin: 24px 0;
+  line-height: 2;
+}
+
+.cookie-container {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: #2f3640;
+  color: #f5f6fa;
+  padding: 20px 32px;
+  box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+  transition: 400ms;
+}
+
+.cookie-container.active {
+  bottom: 0;
+}
+
+.cookie-container h3,
+.cookie-container a {
+  color: green;
+}
+
+
+.cookie-btn {
+  background: green;
+  border: 0;
+  color: #f5f6fa;
+  padding: 0px 48px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+.cookie-container i:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.policy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-and-close {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media(max-width:757px) {
+  .policy {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
