@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0;
+  
 }
 
 body {
@@ -443,13 +443,19 @@ li i {
 
 
 /************************** CAROUSEL *******************************/
-
+.carousel{
+  position: relative;
+}
 .carousel-right {
   position: absolute;
   right: 0;
-  top: 100px;
+  top: 0px;
   max-width: 25%;
   margin-right: 50px;
+}
+.image-right img{
+display: block;
+margin: auto;
 }
 
 .carousel-bottom-right {
@@ -462,7 +468,7 @@ li i {
   border-radius: 20px;
 }
 
-.owl-carousel {
+.owl-one {
   margin-top: 25px;
   max-width: 60%;
   width: 100%;
@@ -517,6 +523,7 @@ li i {
   padding: 0 20%;
 }
 
+
 .slide-content h2 {
   font-family: "Anton", serif;
   font-size: 25px;
@@ -538,6 +545,15 @@ li i {
   border: none;
 }
 
+.slide-content a{
+  color: white;
+}
+
+.slide-content a:hover{
+  color: black;
+  text-decoration: none;
+}
+
 .owl-dots {
   width: 100%;
   text-align: center;
@@ -552,18 +568,31 @@ li i {
 
 
 @media (min-width:1025px) {
-  .owl-carousel {
+  .owl-one {
     margin-left: 100px;
   }
 }
 
+@media(max-width:1540px){
+  .image-right img{
+    max-width: 75%;
+    width: 100%;
+  }
+}
+
 @media (max-width:1024px) {
-  .owl-carousel {
+  .owl-one {
     max-width: 100%;
   }
 
   .carousel-right {
     display: none;
+  }
+}
+
+@media(max-width:600px){
+    #facilities .owl-dots{
+    top: 340px;
   }
 }
 
@@ -582,7 +611,7 @@ li i {
 }
 
 /*********************************  FOOTER  *****************************************************/
-ul {
+.footer ul {
   list-style: none;
 }
 
@@ -682,7 +711,7 @@ ul {
   background-size: cover;
   position: relative;
   width: 100%;
-  margin-top: 50px;
+ 
 }
 
 .hero-text {
@@ -700,7 +729,9 @@ ul {
 
 
 /****************** BENEFITS CONTENT   ********************************/
-
+.benefits .container{
+  padding: 0px;
+}
 
 .benefits-row {
   background-color: black;
@@ -709,6 +740,8 @@ ul {
 
 .benefits .container {
   max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .benefits-row i {
@@ -924,5 +957,320 @@ span.psw {
     display: block;
     width: 100%;
     text-align: center;
+  }
+}
+
+
+
+/************  PRODUCT TILE ************************/
+
+.minicart,
+.wishlist
+{
+  position: relative;
+}
+
+.wishlist p,
+.minicart p{
+  position: absolute;
+  bottom: 1px;
+  left: 18px;
+  border: 1px solid green;
+  border-radius: 50%;
+  width: 100%;
+  text-align: center;
+  color: green;
+}
+
+.content{
+  display: none;
+}
+
+#facilities{
+  max-width: 100%;
+  width: 100%;
+  background-color: black;
+  padding: 20px 20px 20px;
+  margin-top: 30px;
+}
+
+
+
+.product-tile-top{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  color: white; 
+  padding: 40px 20px;
+} 
+
+#facilities hr{
+  border: 0;
+  clear:both;
+  width: 40%;               
+  background-color:white;
+  height: 1px;
+}
+
+#facilities 
+.card, 
+.static-card, 
+.static-image-card{
+  margin-bottom: 20px;
+}
+
+.card-text{
+  display: inline-block;
+}
+
+.noContent {
+  color: #000 !important;
+  background-color: transparent !important;
+  pointer-events: none;
+}
+
+#loadMore {
+  width: 200px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid white;
+  background-color: black;
+  transition: .3s;
+}
+
+#loadMore:hover {
+  color: black;
+  background-color: #fff;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+
+.card img{
+  position: relative;
+
+}
+
+.card-left{
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  border-radius: 50%;
+  border: none;
+  color: #008000;
+  display: none;
+}
+
+.card-left i,
+.card-right i{
+  font-size: 36px;
+  padding: 20px;
+}
+
+.card-right{
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  border-radius: 50%;
+  border: none;
+  color: red;
+  display: none;
+}
+
+.card:hover{
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    background-repeat: no-repeat;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+@media(max-width:1500px){
+  .card-left i,
+  .card-right i{
+    padding: 14px;
+  }
+}
+
+.owl-carousel.off {
+  display: block;
+}
+
+
+.static-card{
+  background-image: url("https://picsum.photos/200/300?random=1");
+  height: 96%;
+  background-size: cover;
+  position: relative;
+}
+
+
+.static-card-body{
+  height: 100px;
+  padding: 1.25rem;
+  position: absolute;
+  bottom: 0%;
+  text-align: center;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.static-card-body button{
+  border-radius: 20px;
+  padding: 0 10px;
+  border: 1px solid gray;
+}
+
+.static-image-card{
+  
+  height: 96%;
+  background-size: cover;
+  position: relative;
+  background-image: 
+              linear-gradient(45deg, rgba(204, 19, 112, 0.62), rgba(55, 0, 107, 0.58)), url(
+'img/static-img.jpg');
+}
+
+.static-image-card p{
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+  color: white;
+  width: 200px;
+}
+
+.static-card h5 a{
+  color: black;
+}
+
+.static-card button a{
+  color: green;
+}
+
+
+@media(max-width:767px){
+  .card{
+    width: 80%;
+    margin: auto;
+  }
+  #loadMore{
+    display: none;
+  }
+  .owl-theme .owl-dots .owl-dot:nth-child(n+5){
+    display: none;
+  }
+  .static-card{
+    bottom: auto;
+    width: 80%;
+    height: 350px;
+
+    margin: auto;
+  }
+}
+
+
+
+
+
+.slider{
+  background-color: #2a2a2a;
+  height: 700px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.slider-top{
+  position: relative;
+  height: 150px;
+  max-width: 80%;
+  margin: auto;
+
+}
+
+.slider h2{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding-top: 40px;
+}
+
+.slider p{
+  text-align: center;
+  color: white;
+}
+
+.slider .slider-card{
+  margin-top: 50px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.slider .card-body{
+  text-align: center;
+  background-color: white;
+}
+
+.slider .card-body p{
+  color: green;
+}
+
+.slider-slides{
+  display: flex;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 30%;
+  right: 30%; 
+}
+
+.slider hr{
+  width: 25%;
+  clear:both;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.owl-two 
+.owl-prev,
+.owl-next {
+  position: absolute;
+  bottom: 430px;
+}
+
+.owl-two .owl-dots .owl-dot{
+  margin-top: 80px;
+}
+
+.owl-two 
+span[aria-label="Previous"],
+span[aria-label="Next"]{
+  border: 1px solid #333333;
+  padding: 10px;
+  background-color: #333333;
+  color: white;
+}
+
+.owl-two .owl-prev {
+  left: 25%;
+}
+
+.owl-two .owl-next {
+  right: 25%;
+}
+
+@media(max-width:500px){  
+  .owl-two .owl-next{
+    right: 10%;
+    
+  }
+  .owl-two .owl-prev{
+    left: 10%;
+   
   }
 }

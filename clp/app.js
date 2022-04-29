@@ -85,49 +85,82 @@ $('.list-item a').attr('href','../404/404.html')
 $('.footer-col li a').attr('href','../404/404.html')
 
 
+let carts = document.querySelectorAll('.add-to-cart')
 
 
-/******************** MODAL **************/
+for(let i = 0; i < carts.length; i++){
+carts[i].addEventListener('click', () =>{
+  cartNumbers()
+})
+} 
 
+function onLoadCartNumbers(){
+let productNumbers = localStorage.getItem('cartNumbers')
 
-var modal = document.getElementById('open-modal');
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+if(productNumbers){
+ document.querySelector('.minicart p').textContent = productNumbers
+}
 }
 
-function showPass() {
-    var temp = document.getElementById("psw");
-    if (temp.type === "password") {
-        temp.type = "text";
-    }
-    else {
-        temp.type = "password";
-    }
+function cartNumbers() {
+let productNumbers = localStorage.getItem('cartNumbers')
+
+
+productNumbers = parseInt(productNumbers)
+if(productNumbers){
+  localStorage.setItem('cartNumbers',productNumbers+1)
+
+  document.querySelector('.minicart p').textContent = productNumbers + 1 
+
+
+
+}else{
+  localStorage.setItem('cartNumbers',1)
+  
+  document.querySelector('.minicart p').textContent = 1
+
+
 }
 
-
-
-
-const cookieContainer = document.querySelector(".cookie-container");
-const cookieButton = document.querySelector(".cookie-btn");
-
-cookieButton.addEventListener("click", () => {
-  cookieContainer.classList.remove("active");
-  localStorage.setItem("cookieBannerDisplayed", "true");
-});
-
-setTimeout(() => {
-  if (!localStorage.getItem("cookieBannerDisplayed")) {
-    cookieContainer.classList.add("active");
-  }
-}, 10000);
-
-function closeDialog() {
-  cookieContainer.style.display = "none"
 }
+
+let wishlists = document.querySelectorAll('.add-to-wishlists')
+
+
+for(let i = 0; i < wishlists.length; i++){
+wishlists[i].addEventListener('click', () =>{
+  wishlistNumbers()
+})
+} 
+
+function onLoadWishlistNumbers(){
+let wishlistProductNumbers = localStorage.getItem('wishlistNumbers')
+
+if(wishlistProductNumbers){
+  document.querySelector('.wishlist p').textContent = wishlistProductNumbers
+
+}
+}
+
+function wishlistNumbers() {
+let wishlistProductNumbers = localStorage.getItem('wishlistNumbers')
+
+
+wishlistProductNumbers = parseInt(wishlistProductNumbers)
+if(wishlistProductNumbers){
+  localStorage.setItem('wishlistNumbers',wishlistProductNumbers+1)
+  document.querySelector('.wishlist p').textContent = wishlistProductNumbers + 1;
+
+
+}else{
+  localStorage.setItem('wishlistNumbers',1)
+  document.querySelector('.wishlist p').textContent = 1;
+}
+
+}
+
+onLoadCartNumbers()
+onLoadWishlistNumbers()
 
 /*** PRODUCT TILE *****/
 
@@ -338,85 +371,6 @@ $(window).resize(function() {
     }
 });
 });
-
-
-
-let carts = document.querySelectorAll('.add-to-cart')
-
-
-for(let i = 0; i < carts.length; i++){
-carts[i].addEventListener('click', () =>{
-  cartNumbers()
-})
-} 
-
-function onLoadCartNumbers(){
-let productNumbers = localStorage.getItem('cartNumbers')
-
-if(productNumbers){
- document.querySelector('.minicart p').textContent = productNumbers
-}
-}
-
-function cartNumbers() {
-let productNumbers = localStorage.getItem('cartNumbers')
-
-
-productNumbers = parseInt(productNumbers)
-if(productNumbers){
-  localStorage.setItem('cartNumbers',productNumbers+1)
-
-  document.querySelector('.minicart p').textContent = productNumbers + 1 
-
-
-
-}else{
-  localStorage.setItem('cartNumbers',1)
-  
-  document.querySelector('.minicart p').textContent = 1
-
-
-}
-
-}
-
-let wishlists = document.querySelectorAll('.add-to-wishlists')
-
-
-for(let i = 0; i < wishlists.length; i++){
-wishlists[i].addEventListener('click', () =>{
-  wishlistNumbers()
-})
-} 
-
-function onLoadWishlistNumbers(){
-let wishlistProductNumbers = localStorage.getItem('wishlistNumbers')
-
-if(wishlistProductNumbers){
-  document.querySelector('.wishlist p').textContent = wishlistProductNumbers
-
-}
-}
-
-function wishlistNumbers() {
-let wishlistProductNumbers = localStorage.getItem('wishlistNumbers')
-
-
-wishlistProductNumbers = parseInt(wishlistProductNumbers)
-if(wishlistProductNumbers){
-  localStorage.setItem('wishlistNumbers',wishlistProductNumbers+1)
-  document.querySelector('.wishlist p').textContent = wishlistProductNumbers + 1;
-
-
-}else{
-  localStorage.setItem('wishlistNumbers',1)
-  document.querySelector('.wishlist p').textContent = 1;
-}
-
-}
-
-onLoadCartNumbers()
-onLoadWishlistNumbers()
 
 
 $('.owl-two').owlCarousel({
