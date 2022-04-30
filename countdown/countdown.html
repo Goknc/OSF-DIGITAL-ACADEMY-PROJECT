@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="countdown.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>We Will Release OSF Academy</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="countdown">
+            <div class="remaining-month">
+                <p id="month"></p>
+                <p>Months</p>
+            </div>
+            <div class="remaining-day">
+                <p id="day"></p>
+                <p>Days</p>
+            </div>
+            <div class="remaining-hour">
+                <p id="hour"></p>
+                <p>Hours</p>
+            </div>
+            <div class="remaining-minute">
+                <p id="minute"></p>
+                <p>Minutes</p>
+            </div>
+            <div class="remaining-second">
+                <p id="second"></p>
+                <p>Seconds</p>
+            </div>
+        </div>
+        <form>
+            <div>
+                <input type="email" name="email" id="email" placeholder="Enter your email "></div>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="countdown.js"></script>
+</body>
+
+</html>

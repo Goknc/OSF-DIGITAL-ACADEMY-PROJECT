@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.container {
+    max-width: 90%;
+    background-color: white;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.container h2 {
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+.container p {
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#month,
+#day,
+#hour,
+#minute,
+#second {
+    border: 1px solid green;
+    border-radius: 50%;
+    font-size: 48px;
+    padding: 3.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.remaining-month,
+.remaining-day,
+.remaining-hour,
+.remaining-minute,
+.remaining-second {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 70px;
+    padding-top: 80px;
+}
+
+form input {
+    height: 50px;
+}
+
+form input:nth-child(1) {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid gray;
+    padding-left: 10px;
+}
+
+form input:nth-child(2) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid gray;
+}
+
+@media(max-width:950px) {
+    .countdown {
+        display: inline-block;
+    }
+}

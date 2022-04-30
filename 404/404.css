@@ -88,4 +88,9 @@ form.search::after {
         padding-top: 100px;
     }
 
+    @media (max-width:400px) {
+        .container {
+            height: 100%;
+        }
+    }
 }
